@@ -220,3 +220,34 @@ input:focus, textarea:focus {
 }
 
 .linkedin-icon { width: 18px; height: 18px; }
+
+/* --- RESOURCE HUB GRID --- */
+.hub-container {
+    margin-top: 100px;
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    z-index: 10;
+    padding-bottom: 40px;
+}
+
+/* Make the cards act as clickable links */
+.resource-card {
+    text-decoration: none;
+    display: block;
+    margin: 0; /* Override the default card margin */
+    width: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 0 15px rgba(193, 124, 116, 0.2);
+    border-color: var(--dusty-rose);
+}
+
+.resource-card h2 {
+    margin-top: 0;
+}
